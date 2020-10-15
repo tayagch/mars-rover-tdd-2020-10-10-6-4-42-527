@@ -45,6 +45,9 @@ public class MarsRover {
             if(heading.equals("E")){
                 locationX++;
             }
+            if(heading.equals("W")){
+                locationX--;
+            }
         }
 
         executeTurn(command);

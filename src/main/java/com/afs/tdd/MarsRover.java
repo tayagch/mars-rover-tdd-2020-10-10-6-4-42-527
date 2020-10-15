@@ -1,6 +1,8 @@
 package com.afs.tdd;
 
 import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
 import java.util.stream.Stream;
 
 public class MarsRover {
@@ -43,16 +45,25 @@ public class MarsRover {
     }
 
     private void executeTurn(String command) {
-        if(command.equals("L")){
-            if(heading.equals("N")){
-                heading = "W";
-            }
-        }
 
-        if(command.equals("R")){
-            if(heading.equals("N")){
-                heading = "E";
+        List<String> headingList = Arrays.asList("N","W","S","E");
+        int index = headingList.indexOf(heading);
+        if(command.equals("L")){
+            if(index == headingList.size() - 1){
+                index = 0;
+            }
+            else{
+                index++;
             }
         }
+        if(command.equals("R")){
+            if(index == 0){
+                index = 3;
+            }
+            else{
+                index--;
+            }
+        }
+        heading = headingList.get(index);
     }
 }

@@ -1,6 +1,7 @@
 package com.afs.tdd;
 
 import java.util.Arrays;
+import java.util.stream.Stream;
 
 public class MarsRover {
     private int locationX;
@@ -28,7 +29,7 @@ public class MarsRover {
     }
 
     public void executeCommands() {
-        Arrays.asList(commands).stream().forEach(command -> this.executeCommand(command));
+        Stream.of(commands).forEach(this::executeCommand);
     }
 
     private void executeCommand(String command) {

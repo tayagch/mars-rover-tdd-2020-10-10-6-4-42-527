@@ -39,9 +39,19 @@ public class MarsRover {
             }
         }
 
+        executeTurn(command);
+    }
+
+    private void executeTurn(String command) {
         if(command.equals("L")){
             if(heading.equals("N")){
                 heading = "W";
+            }
+        }
+
+        if(command.equals("R")){
+            if(heading.equals("N")){
+                heading = "E";
             }
         }
     }

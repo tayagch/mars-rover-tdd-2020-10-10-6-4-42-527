@@ -33,7 +33,7 @@ class MarsRoverTest {
     @Test
     public void should_x_0_y_0_heading_E_given_execute_command_x_0_y_0_heading_N_when_command_R() {
         // Given
-        MarsRover marsRover = new MarsRover(0,0,"N","L");
+        MarsRover marsRover = new MarsRover(0,0,"N","R");
         // When
         marsRover.executeCommands();
         // Then

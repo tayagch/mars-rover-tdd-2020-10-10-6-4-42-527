@@ -48,7 +48,7 @@ public class MarsRover {
             if(heading.equals("W")){
                 locationX--;
             }
-        }else{
+        }else if (command.equals("L") || command.equals("R")){
             executeTurn(command);
         }
     }

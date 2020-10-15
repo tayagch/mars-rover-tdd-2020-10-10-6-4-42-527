@@ -38,5 +38,11 @@ public class MarsRover {
                 locationY++;
             }
         }
+
+        if(command.equals("L")){
+            if(heading.equals("N")){
+                heading = "W";
+            }
+        }
     }
 }

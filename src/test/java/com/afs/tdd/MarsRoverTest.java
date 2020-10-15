@@ -20,6 +20,13 @@ class MarsRoverTest {
 
     @Test
     public void should_x_0_y_0_heading_W_given_execute_command_x_0_y_0_heading_N_when_command_L() {
-
+        // Given
+        MarsRover marsRover = new MarsRover(0,0,"N","L");
+        // When
+        marsRover.executeCommands();
+        // Then
+        assertEquals(0,marsRover.getLocationX());
+        assertEquals(0,marsRover.getLocationY());
+        assertEquals("W",marsRover.getHeading());
     }
 }

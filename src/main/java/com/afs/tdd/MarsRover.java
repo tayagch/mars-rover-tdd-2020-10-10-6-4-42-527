@@ -31,7 +31,7 @@ public class MarsRover {
     }
 
     public void executeCommands() {
-        Stream.of(commands).forEach(this::executeCommand);
+        Stream.of(commands.split("")).forEach(this::executeCommand);
     }
 
     private void executeCommand(String command) {

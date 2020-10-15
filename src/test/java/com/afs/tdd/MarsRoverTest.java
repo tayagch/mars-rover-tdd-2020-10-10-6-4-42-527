@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class MarsRoverTest {
     // 0,0 N M
     @Test
-    void should_x_0_y_1_heading_N_given_execute_command_when_command_M() {
+    public void should_x_0_y_1_heading_N_given_execute_command_x_0_y_0_heading_N_when_command_M() {
         // Given
         MarsRover marsRover = new MarsRover(0,0,"N","M");
         // When
@@ -18,4 +18,8 @@ class MarsRoverTest {
         assertEquals("N",marsRover.getHeading());
     }
 
+    @Test
+    public void should_x_0_y_0_heading_W_given_execute_command_x_0_y_0_heading_N_when_command_L() {
+
+    }
 }

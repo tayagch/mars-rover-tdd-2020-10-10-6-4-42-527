@@ -137,4 +137,16 @@ class MarsRoverTest {
         assertEquals(0,marsRover.getLocationY());
         assertEquals("S",marsRover.getHeading());
     }
+
+    @Test
+    void should_x_0_y_0_heading_N_given_execute_command_x_0_y_0_heading_W_when_command_R() {
+        // Given
+        MarsRover marsRover = new MarsRover(0,0,"W","R");
+        // When
+        marsRover.executeCommands();
+        // Then
+        assertEquals(0,marsRover.getLocationX());
+        assertEquals(0,marsRover.getLocationY());
+        assertEquals("N",marsRover.getHeading());
+    }
 }

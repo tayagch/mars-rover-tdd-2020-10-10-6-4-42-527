@@ -51,6 +51,9 @@ public class MarsRover {
         }else if (command.equals("L") || command.equals("R")){
             executeTurn(command);
         }
+        else {
+            throw new IllegalArgumentException("CommandNotDefinedException");
+        }
     }
 
     private void executeTurn(String command) {

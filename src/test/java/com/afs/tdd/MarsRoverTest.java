@@ -169,7 +169,7 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(0,0,"N","A");
 
         // When
-        Exception exception = assertThrows(IllegalAccessException.class, () -> marsRover.executeCommands());
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> marsRover.executeCommands());
 
         // Then
         assertEquals("CommandNotDefinedException",exception.getMessage());

@@ -48,9 +48,9 @@ public class MarsRover {
             if(heading.equals("W")){
                 locationX--;
             }
+        }else{
+            executeTurn(command);
         }
-
-        executeTurn(command);
     }
 
     private void executeTurn(String command) {
